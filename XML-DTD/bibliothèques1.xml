@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE site SYSTEM "validateur1.dtd">
+<site>
+   <themes>
+      <theme id="t1" nom="Amour" />
+      <theme id="t2" nom="Aventure" />
+      <theme id="t3" nom="Policier" />
+      <theme id="t4" nom="Fantastique" />
+      <theme id="t5" nom="Science-fiction" />
+      <theme id="t6" nom="Fantasy" />
+      <theme id="t7" nom="Manga" />
+      <theme id="t8" nom="BD" />
+   </themes>
+   <langues>
+      <langue id="lan1" nom="Francais" />
+      <langue id="lan2" nom="Anglais" />
+      <langue id="lan3" nom="Espagnol" />
+      <langue id="lan4" nom="Russe" />
+      <langue id="lan5" nom="Arabe" />
+      <langue id="lan6" nom="Allemand" />
+   </langues>
+   
+   <auteurs>
+      <auteur id="a1">
+         <prenom>Guillaume</prenom>
+         <nom>Musso</nom>
+         <dateNaissance>06/06/1974</dateNaissance>
+         <biographie>
+            Romancier français né en 1974 à Antibes, Guillaume Musso est l'auteur le plus vendu en France. 
+            Écrivain prolifique, il sort chaque année un nouveau roman qui atteint directement le top des ventes. 
+            Traduit en 40 langues, il est également l'un des auteurs français les plus lus à l'étranger.
+         </biographie>
+      </auteur>
+      <auteur id="a2">
+         <prenom>Marc</prenom>
+         <nom>Levy</nom>
+         <dateNaissance>16/10/1961</dateNaissance>
+         <biographie>
+            Marc Levy, parfois orthographié Marc Lévy, né le 16 octobre 1961 à Boulogne-Billancourt, 
+            est un romancier français devenu célèbre dès son premier roman, Et si c'était vrai…, adapté au cinéma en 2005.
+         </biographie>
+      </auteur>
+   </auteurs>
+   
+   <editeurs>
+      <editeur id="e1" nom="Poche">
+         <livreR idref="liv1"/>
+      </editeur>
+      
+      <editeur id="e2" nom="Versilio">
+         <livreR idref="liv2"/>
+         <livreR idref="liv3"/>
+      </editeur>
+      
+   </editeurs>
+   
+   <livres>
+      <livre id="liv1">
+         <auteursR>
+            <auteurR idref="a1" />
+         </auteursR>
+         <editeurR idref="e1" />
+         <titre>L'Inconnue de la Seine</titre>
+         <image>https://static.fnac-static.com/multimedia/Images/FR/NR/ef/75/de/14579183/1540-1/tsp20220920074733/L-Inconnue-de-la-Seine.jpg</image>
+         <resume>
+            Par une nuit brumeuse de décembre, une jeune femme est repêchée dans la Seine au niveau du Pont-Neuf. Nue, amnésique, mais vivante.
+            Très agitée, elle est conduite à l'infirmerie de la préfecture de police de Paris... d'où elle s'échappe au bout de quelques heures.
+            Les analyses ADN et les photos révèlent son identité : il s'agit de la célèbre pianiste Milena Bergman. Mais c'est impossible, car Milena est morte dans un crash d'avion, il y a plus d'un an.
+            Rapahël, son ancien fiancé, et Roxane, une flic fragilisée par sa récente mise au placard, se prennent de passion pour cette enquête, bien décidés à éclaircir ce mystère : comment peut-on être à la fois morte et vivante ?
+         </resume>
+         <dateParution>20/09/2022</dateParution>
+         <langueR idref="lan1" />
+         <themeR idref="t1" />
+         <prix>8.90</prix>
+         <quantiteEntrepot>40</quantiteEntrepot>
+      </livre>
+      
+      <livre id="liv2">
+         <auteursR>
+            <auteurR idref="a2" />
+         </auteursR>
+         <editeurR idref="e2" />
+         <titre>C'est arrivé la nuit</titre>
+         <image>https://www.marclevy.com/cpanel/vignettes/books_zoom/20266.jpg</image>
+         <resume>
+            Ils sont hors-la-loi
+            Mais ils œuvrent pour le bien
+            Ils sont amis et partagent leurs secrets
+            Pourtant ils ne se sont jamais rencontrés
+            Jusqu'au jour où... 
+         </resume>
+         <dateParution>29/09/2020</dateParution>
+         <langueR idref="lan1" />
+         <themeR idref="t2" />
+         <prix>7.50</prix>
+         <quantiteEntrepot>30</quantiteEntrepot>
+      </livre>
+      
+      <livre id="liv3">
+         <auteursR>
+            <auteurR idref="a2" />
+         </auteursR>
+         <editeurR idref="e2" />
+         <titre>Éteignez tout et la vie s'allume</titre>
+         <image>https://www.marclevy.com/cpanel/vignettes/books_zoom/20273.jpg?rnd=2414</image>
+         <resume>
+            Elle avait entendu l'histoire de gens
+            qui se sont rencontrés au bon et au mauvais moment,
+            de ceux qui se sont aimés jusqu'au bout,
+            de ceux qui ont aimé sans pouvoir le dire,
+            de ceux qui pensent " au début j'ai tout raté " et puis ensuite...
+         </resume>
+         <dateParution>22/11/2022</dateParution>
+         <langueR idref="lan1" />
+         <themeR idref="t1" />
+         <prix>12.99</prix>
+         <quantiteEntrepot>5</quantiteEntrepot>
+      </livre>
+   </livres>
+   
+   <clients>
+         <client id="cl1">
+         <prenom>Mohamed</prenom>
+         <nom>BOUCHENGUOUR</nom>
+         <age>21</age>
+         <telephone>0632000000</telephone>
+         <email>mohamed.bouchenguour@licence3.fr</email>
+         <mdp>1ddec58da2b34e41ac79ff9f868c40413bc2e0e2eab4723cfb24224709a806cc</mdp>
+         <commande id="cmd1">
+            <dateCommande>12/12/2022</dateCommande>
+            <statut>En cours de livraison</statut>
+            <quantiteLivre>
+               <livreR idref="liv1" />
+               <quantite>3</quantite>
+            </quantiteLivre>
+            <total>26.7</total>
+            <adresse>150 rue de rien</adresse>
+            <cPostale>21000</cPostale>
+            <ville>Dijon</ville>
+            <pays>France</pays>
+            <modePaiement>Paypal</modePaiement>
+         </commande>
+      </client>
+      
+      <client id="cl2">
+         <prenom>Mehdi</prenom>
+         <nom>ASNI</nom>
+         <age>21</age>
+         <telephone>0632000000</telephone>
+         <email>mehdi.ASNI@licence3.fr</email>
+         <mdp>8zedc58da2b34e41ac79ff9f868c40413bc2e0e2eab4723cfb2422470914s52e</mdp>
+      </client>
+      
+      <client id="cl3">
+         <prenom>Partrick</prenom>
+         <nom>JEAN</nom>
+         <age>45</age>
+         <telephone>0635230000</telephone>
+         <email>Partrick.JEAN@licence3.fr</email>
+         <mdp>25sxc58da2b34e41ac79ff9f868c40jd8f5ve0e2eab4723cfb24224709a58szd</mdp>
+         <commande id="cmd2">
+            <dateCommande>20/12/2022</dateCommande>
+            <statut>Livré</statut>
+            <quantiteLivre>
+               <livreR idref="liv1" />
+               <quantite>2</quantite>
+            </quantiteLivre>
+            <quantiteLivre>
+               <livreR idref="liv2" />
+               <quantite>5</quantite>
+            </quantiteLivre>
+            <total>55.3</total>
+            <adresse>150 rue de tout</adresse>
+            <cPostale>71000</cPostale>
+            <ville>Mâcon</ville>
+            <pays>France</pays>
+            <modePaiement>Carte bancaire</modePaiement>
+         </commande>
+      </client>
+   </clients>
+</site>

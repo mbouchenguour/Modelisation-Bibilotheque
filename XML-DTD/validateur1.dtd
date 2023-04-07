@@ -1,0 +1,73 @@
+<!ELEMENT site (themes,langues,auteurs,editeurs,livres,clients)>
+
+<!ELEMENT themes (theme*)>
+<!ELEMENT theme EMPTY>
+<!ATTLIST theme id ID #REQUIRED nom CDATA #REQUIRED>
+
+<!ELEMENT langues (langue*)>
+<!ELEMENT langue EMPTY>
+<!ATTLIST langue id ID #REQUIRED nom CDATA #REQUIRED>
+
+
+<!ELEMENT auteurs (auteur*)>
+<!ELEMENT auteur (prenom,nom,dateNaissance,biographie)>
+<!ATTLIST auteur id ID #REQUIRED>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT dateNaissance (#PCDATA)>
+<!ELEMENT biographie (#PCDATA)>
+
+<!ELEMENT editeurs (editeur*)>
+<!ELEMENT editeur (livreR*)>
+<!ATTLIST editeur id ID #REQUIRED nom CDATA #REQUIRED>
+
+<!ELEMENT livreR EMPTY>
+<!ATTLIST livreR idref IDREF #REQUIRED>
+
+<!ELEMENT livres (livre*)>
+<!ELEMENT livre (auteursR,editeurR,titre,image,resume,dateParution,langueR,themeR,prix,quantiteEntrepot)>
+<!ATTLIST livre id ID #REQUIRED>
+
+<!ELEMENT auteursR (auteurR+)>
+<!ELEMENT auteurR EMPTY>
+<!ATTLIST auteurR idref IDREF #REQUIRED>
+
+<!ELEMENT editeurR EMPTY>
+<!ATTLIST editeurR idref IDREF #REQUIRED>
+
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT resume (#PCDATA)>
+<!ELEMENT dateParution (#PCDATA)>
+
+<!ELEMENT langueR EMPTY>
+<!ATTLIST langueR idref IDREF #REQUIRED>
+
+<!ELEMENT themeR EMPTY>
+<!ATTLIST themeR idref IDREF #REQUIRED>
+	
+<!ELEMENT prix (#PCDATA)>
+<!ELEMENT quantiteEntrepot (#PCDATA)>
+
+<!ELEMENT clients (client*)>
+<!ELEMENT client (prenom, nom, age, telephone, email, mdp, commande*)>
+<!ATTLIST client id ID #REQUIRED>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT mdp (#PCDATA)>
+
+<!ELEMENT commande (dateCommande, statut, quantiteLivre+, total, adresse, cPostale, ville, pays, modePaiement)>
+<!ATTLIST commande id ID #REQUIRED>
+<!ELEMENT dateCommande (#PCDATA)>
+<!ELEMENT statut (#PCDATA)>
+
+<!ELEMENT quantiteLivre (livreR, quantite)>
+<!ELEMENT quantite (#PCDATA)>
+
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT cPostale (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT pays (#PCDATA)>
+<!ELEMENT modePaiement (#PCDATA)>
